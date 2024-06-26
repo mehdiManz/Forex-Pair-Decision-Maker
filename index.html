@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex Pair Decision Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Forex Pair Decision Maker</h1>
+
+  <form id="forexForm">
+    <label for="baseCurrency">Base Currency:</label>
+    <select id="baseCurrency" name="baseCurrency" required>
+      <option value="USD">USD</option>
+      <option value="CAD">CAD</option>
+      <option value="GBP">GBP</option>
+      <option value="NZD">NZD</option>
+      <option value="JPY">JPY</option>
+      <option value="CHF">CHF</option>
+      <option value="EUR">EUR</option>
+      <option value="AUD">AUD</option>
+    </select>
+
+    <label for="baseCurrencyStrength">Base Currency Strength:</label>
+    <select id="baseCurrencyStrength" name="baseCurrencyStrength" required>
+      <option value="strong-green">Strong Green</option>
+      <option value="green">Green</option>
+      <option value="strong-red">Strong Red</option>
+      <option value="red">Red</option>
+    </select>
+
+    <label for="quoteCurrency">Quote Currency:</label>
+    <select id="quoteCurrency" name="quoteCurrency" required>
+      <option value="USD">USD</option>
+      <option value="CAD">CAD</option>
+      <option value="GBP">GBP</option>
+      <option value="NZD">NZD</option>
+      <option value="JPY">JPY</option>
+      <option value="CHF">CHF</option>
+      <option value="EUR">EUR</option>
+      <option value="AUD">AUD</option>
+    </select>
+
+    <label for="quoteCurrencyStrength">Quote Currency Strength:</label>
+    <select id="quoteCurrencyStrength" name="quoteCurrencyStrength" required>
+      <option value="strong-green">Strong Green</option>
+      <option value="green">Green</option>
+      <option value="strong-red">Strong Red</option>
+      <option value="red">Red</option>
+    </select>
+
+    <label for="pinBar">Is it a Pin Bar?</label>
+    <select id="pinBar" name="pinBar" required>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <label for="bollinger">Bollinger Band Approved?</label>
+    <select id="bollinger" name="bollinger" required>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <label for="roomToRun">Does it have Room to Run?</label>
+    <select id="roomToRun" name="roomToRun" required>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <button type="submit">Add Currency Pair</button>
+  </form>
+
+  <table id="forexTable">
+    <thead>
+      <tr>
+        <th>Currency Pair</th>
+        <th>Base Currency Strength</th>
+        <th>Quote Currency Strength</th>
+        <th>Is it a Pin Bar?</th>
+        <th>Bollinger Band Approved?</th>
+        <th>Does it have Room to Run?</th>
+        <th>Trade Decision</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be added dynamically here -->
+    </tbody>
+  </table>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
